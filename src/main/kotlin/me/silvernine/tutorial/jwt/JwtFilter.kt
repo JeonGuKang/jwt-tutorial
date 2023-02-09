@@ -12,7 +12,7 @@ import org.springframework.web.filter.GenericFilterBean
 import java.io.IOException
 
 class JwtFilter(private val tokenProvider: TokenProvider) : GenericFilterBean() {
-    
+
     @Throws(IOException::class, ServletException::class)
     override fun doFilter(servletRequest: ServletRequest, servletResponse: ServletResponse, filterChain: FilterChain) {
         val httpServletRequest = servletRequest as HttpServletRequest

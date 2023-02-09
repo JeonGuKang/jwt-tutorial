@@ -7,6 +7,10 @@ import java.util.*
 
 object SecurityUtil {
     private val logger = LoggerFactory.getLogger(SecurityUtil::class.java)
+
+    /**
+     * Security context 의 Authentication 객체를 이용해 userName을 리턴
+     */
     val currentUsername: Optional<String>
         get() {
             val authentication = SecurityContextHolder.getContext().authentication
